@@ -1,0 +1,43 @@
+<h2>Veículo</h2>
+<hr />
+
+<section id="form">
+  <form [formGroup]="formVeiculo" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Marca:</label>
+      <select name="example" formControlName="marca">
+        <option [value]="0">Selecione</option>
+        <option [value]="1">Hyundai</option>
+        <option [value]="2">Ford</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Modelo:</label>
+      <select name="example" formControlName="modelo">
+        <option [value]="0">Selecione</option>
+        <option [value]="1">HB20</option>
+        <option [value]="2">New Fiesta</option>
+      </select>
+    </div>
+    <div>
+      <label>Ano Fabricação:</label>
+      <input type="text" formControlName="anoFabricacao">
+    </div>
+    <div>
+      <label>Ano Modelo:</label>
+      <input type="text" formControlName="anoModelo">
+    </div>
+    <div>
+      <label>Chassi:</label>
+      <input type="text" formControlName="chassi">
+    </div>
+    <div>
+      <label>Placa:</label>
+      <input type="text" formControlName="placa">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary mr-2">Próximo</button>
+      <a href="/seguro-segurado" class="btn btn-secondary">Voltar</a>
+    </div>
+  </form>
+</section>

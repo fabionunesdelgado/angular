@@ -1,0 +1,46 @@
+<h2>Seguro e Segurado</h2>
+<hr />
+
+<section id="form">
+  <form [formGroup]="formSeguroSegurado" (ngSubmit)="onSubmit()">
+    <input type="hidden" formControlName="id">
+    <div class="form-group">
+      <label>CPF:</label>
+      <input type="text" formControlName="cpf">
+    </div>
+    <div>
+      <label>Nome:</label>
+      <input type="text" formControlName="nome">
+    </div>
+    <div>
+      <label>Data Nascimento:</label>
+      <input type="date" formControlName="dataNascimento">
+    </div>
+    <div>
+      <label>Tipo de Seguro:</label>
+      <select name="example" formControlName="tipoSeguro">
+        <option [value]="0">Selecione</option>
+        <option [value]="1">Seguro Novo</option>
+        <option [value]="2">Renovações</option>
+      </select>
+    </div>
+    <div>
+      <label>Tipo de Vigência:</label>
+      <select name="example" formControlName="tipoVigencia">
+        <option [value]="0">Selecione</option>
+        <option [value]="1">Anual</option>
+        <option [value]="2">Plurianual</option>
+      </select>
+    </div>
+    <div>
+      <label>Início de Vigência:</label>
+      <input type="date" formControlName="iniVigencia">
+      <label>Fim de Vigência:</label>
+      <input type="date" formControlName="fimVigencia">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary mr-2">Próximo</button>
+      <a href="#" class="btn btn-secondary">Voltar</a>
+    </div>
+  </form>
+</section>
